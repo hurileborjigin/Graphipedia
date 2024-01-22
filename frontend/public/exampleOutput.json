@@ -1,0 +1,68 @@
+[
+  {
+  "from_title": "Germany",
+  "from_id": 11867,
+  "to_title": [
+    "Audi",
+  "Debt_brake_(Germany)",
+  "University_of_Rostock",
+  "Germanic_law",
+  "Bochum",
+  "Michelin_Guide",
+  "Federal_budget_of_Germany",
+  "Chinese_cuisine",
+  "Tunisia",
+  "Wayback_Machine",
+  "Generalplan_Ost",
+  "Hanseatic_League"],
+  "to_id": [
+    848, 45367539,   670437, 30865179,   179042,  2036409,  2254132,     6583,
+    30188, 23538754,   356609,    14105,   363897,    53422
+    ],
+    "reference_count": [
+      99, 10,    679,   371, 1982, 2106,    74, 2265, 23612, 510087,
+      666,   2049
+    ]
+  },
+  {
+    "from_title": "Audi",
+    "from_id": 848,
+    "to_title": [
+
+      "Homologation",
+      "Mansory",
+      "Association_football",
+      "Canada",
+      "1982_World_Rally_Championship",
+      "Audi_Q5",
+      "1._FC_Nürnberg",
+      "Motoren_Technik_Mayer",
+      "Ford_of_Europe",
+      "United_Kingdom"
+    ],
+    "to_id": [
+      744579, 15677351,    10568,  5042916,  8671644,  1579560,  1070941,
+      38138965,  9387492,    31717
+    ],
+    "reference_count": [
+      305,   115, 259136, 160331,  211,   178,  2574,    108,   458,
+      206822
+    ]
+  },
+  {
+    "from_title": "Mongolia",
+    "from_id": 19271,
+    "to_title": [
+      "United_Kingdom",
+
+      "Bhikkhu",
+      "Murong",
+      "East_Asian_typography",
+      "List_of_ethnic_groups_in_China",
+      "Boortsog"
+    ],
+    "to_id": [ 462109,  3720501, 71632151,  6097255, 16868373, 31717],
+    "reference_count": [
+      3323,   190,   323,    959,   404, 206822]
+  }
+]

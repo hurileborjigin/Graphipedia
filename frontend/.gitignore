@@ -1,0 +1,5 @@
+
+*.csv
+*.gz
+backend/databasedump.sh
+/node_modules

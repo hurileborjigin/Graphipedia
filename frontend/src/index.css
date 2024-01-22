@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+#tooltip {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+html,
+body,
+#sigma-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4em;
+}
+
+#buttons {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  display: flex;
+}
+#buttons > button {
+  margin-right: 1em;
+  display: inline-block;
+  text-align: center;
+  background: white;
+  outline: none;
+  border: 1px solid dimgrey;
+  border-radius: 2px;
+  cursor: pointer;
+}
+#buttons > button img {
+  height: 2em;
+}
+
+#buttons > button > span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#buttons > button:last-child {
+  margin-right: 0;
+}
+
+#search {
+  position: absolute;
+  left: 1em;
+  top: 1em;
+}
+/* Search Input Styling */
+#search-input {
+  width: 100%; /* Full width */
+  padding: 10px 15px; /* Padding for comfort */
+  margin: 10px 0; /* Spacing from other elements */
+  box-sizing: border-box; /* Makes sure padding doesn't affect the width */
+
+  border: 2px solid #007bff; /* Border color */
+  border-radius: 25px; /* Rounded corners */
+  outline: none; /* Removes the outline */
+
+  font-size: 16px; /* Text size */
+  color: #333; /* Text color */
+  background-color: #fff; /* Background color */
+
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effect */
+}
+
+/* When the input is focused */
+#search-input:focus {
+  border-color: #0056b3; /* Darker border color */
+  box-shadow: 0 0 8px 0 rgba(0, 123, 255, 0.25); /* Subtle shadow for depth */
+}
+
+/* Styling for suggestions list */
+#suggestions {
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+  margin-top: 5px;
+  background-color: #fff;
+  overflow-y: auto; /* In case of many suggestions */
+  max-height: 150px; /* Limit height with scroll */
+}
+
+/* Individual suggestion item */
+#suggestions option {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Hover effect for suggestion items */
+#suggestions option:hover {
+  background-color: #f8f9fa;
+}
+
+#descIcon{
+  display: inline-block;
+  height: 2em;
+  width: auto;
+}
+.input #labels-threshold{
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+  display: flex;
+}

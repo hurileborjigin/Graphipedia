@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#tooltip {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+html,
+body,
+#sigma-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#loader {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+}
+
+#buttons {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    display: flex;
+}
+#buttons > button {
+    margin-right: 1em;
+    display: inline-block;
+    text-align: center;
+    background: white;
+    outline: none;
+    border: 1px solid dimgrey;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#buttons > button img {
+    height: 2em;
+}
+#buttons > button > span {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#buttons > button:last-child {
+    margin-right: 0;
+}
+
+#search {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+}
+
+
+
+
+/* Styling for suggestions list */
+#suggestions {
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    background-color: #fff;
+    overflow-y: auto;
+    max-height: 150px;
+}
+
+/* Individual suggestion item */
+#suggestions option {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Hover effect for suggestion items */
+#suggestions option:hover {
+    background-color: #f8f9fa;
+}
+
+
+#search-button {
+    width: 100px; /* Initial width */
+    padding: 10px 15px;
+    margin: 10px 0;
+    box-sizing: border-box;
+
+    border: 2px solid #007bff;
+    border-radius: 50px;
+    outline: none;
+
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+
+    transition: width 0.3s ease-in-out, border-color 0.3s, box-shadow 0.3s;
+}
+/* Search Input Styling */
+#search-depth {
+    width: 100px; /* Initial width */
+    padding: 10px 15px;
+    margin: 10px 0;
+    box-sizing: border-box;
+
+    border: 2px solid #007bff;
+    border-radius: 25px;
+    outline: none;
+
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+
+    transition: width 0.3s ease-in-out, border-color 0.3s, box-shadow 0.3s;
+}
+
+#search-input, #search-text  {
+    width: 300px; /* Initial width */
+    padding: 10px 15px;
+    margin: 10px 0;
+    box-sizing: border-box;
+
+    border: 2px solid #007bff;
+    border-radius: 25px;
+    outline: none;
+
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+
+    transition: width 0.3s ease-in-out, border-color 0.3s, box-shadow 0.3s;
+}
+
+/* When the input is focused or has content */
+#search-input:focus, #search-input:not(:placeholder-shown), #search-text:focus, #search-text:not(:placeholder-shown) {
+    width: 100%; /* Expanded width */
+    border-color: #0056b3;
+    box-shadow: 0 0 8px 0 rgba(0, 123, 255, 0.25);
+}
+/*#tooltip {*/
+/*    position: absolute;*/
+/*    !*left: 20em;*!*/
+/*    !*top: 5em;*!*/
+/*    !*z-index: 1000;*!*/
+/*    background-color: white;*/
+/*    border: 1px solid black;*/
+/*    padding: 10px;*/
+/*    display: none;*/
+/*    width: 300px;*/
+/*    max-height: 500px;*/
+/*    overflow-y: auto;*/
+/*}*/
+
+
+
+.hidden {
+    display: none;
+}
+
+#search-button:active {
+    background-color: #0056b3; /* Green background when button is pressed */
+    color: white; /* White text color */
+}
+
+
+
+
+:root {
+    --ruby: #e22653;
+    --grey: #999;
+    --dark-grey: #666;
+    --light-grey: #ccc;
+    --cream: #f9f7ed;
+    --transparent-white: #ffffffcc;
+    --transition: all ease-out 300ms;
+    --shadow: 0 1px 5px var(--dark-grey);
+    --hover-opacity: 0.7;
+    --stage-padding: 8px;
+    --panels-width: 350px;
+    --border-radius: 3px;
+}
+.panels {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 350px;
+    max-height: calc(100vh - 2 * var(--stage-padding));
+    overflow-y: auto;
+    padding: var(--stage-padding);
+    scrollbar-width: thin;
+}
+.panel {
+    background: white;
+    padding: 1em;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+.panel:not(:last-child) {
+    margin-bottom: 0.5em;
+}
+.panel h2 button {
+    float: right;
+    background: white;
+    border: 1px solid black;
+    border-radius: var(--border-radius);
+    font-size: 1.2em;
+    height: 1em;
+    width: 1em;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.panel h2 button:hover {
+    opacity: var(--hover-opacity);
+}

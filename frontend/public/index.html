@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <title>Graphipedia</title>
+</head>
+<body>
+
+<div id="sigma-container"></div>
+<div id="loader"><span>⌛</span></div>
+
+
+
+<div id="buttons">
+  <button id="random">
+    <span><img alt="" src="./GiPerspectiveDiceSixFaces.svg" />random</span>
+  </button>
+
+  <button id="forceatlas2">
+        <span>
+          <img alt="" id="forceatlas2-start-label" src="./BiPlay.svg" />
+          <img alt="" id="forceatlas2-stop-label" style="display: none" src="./BiPause.svg" />
+          Force Atlas 2
+        </span>
+  </button>
+  <button id="circular">
+    <span><img alt="" src="./BiLoaderCircle.svg" />circular</span>
+  </button>
+  <input id="threshold" type="checkbox">Search with Threshold</input>
+  <input id="labels-threshold" type="range" min="0" max="100000" step="1000" />
+
+</div>
+
+<div class="panels">
+  <div class="panel">
+    <input type="search" id="search-input" list="suggestions" placeholder="Try searching for a link..." />
+    <datalist id="suggestions"></datalist>
+  </div>
+  <div class="panel">
+    <div><img id="descIcon" alt="" src="./info.png" /><strong>Description</strong></div>
+    <div id="tooltip" class="hidden"></div>
+
+  </div>
+</div>
+
+<div class="controls">
+
+</div>
+
+
+<div id="search">
+
+  <input type="search" id="search-text"  placeholder="Try searching for a text..." />
+  <select id="search-depth">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  </select>
+  <button id="search-button">Search</button>
+</div>
+
+<script src="build/bundle.js"></script>
+
+</body>
+</html>
